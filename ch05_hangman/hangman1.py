@@ -25,11 +25,13 @@ word_list = ['apple', 'banana', 'camel']
 chosen_word = random.choice(word_list)
 guess = input('알파벳 하나를 추측해보세요>>>').lower()
 
-# 단어 안에 사용자가 입력한 알파벳이 포함되어 있는지 바로 확인
-if guess in chosen_word:
-    print("정답!")
-else:
-    print("오답!")
 
+
+# 단어 안에 사용자가 입력한 알파벳이 포함되어 있는지 바로 확인
+for letter in chosen_word:
+    if letter == guess:
+        print('정답')
+    else:
+        print('오답')
 
 
